@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decimal to Binary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Decimal - Binary Converter</h1>
+    <div class="container">
+      <div class="decimal-to-binary">
+        <h2>Decimal To Binary</h2>
+
+        <div class="input-container">
+          <label for="decimal-input">Enter a decimal number: </label>
+          <input id="decimal-input" class="number-input" type="number" value="" name="decimal number input" />
+
+          <button id="decimal-convert-btn" class="convert-btn">Convert</button>
+        </div>
+
+        <output id="binary-result" for="decimal-input"></output>
+
+        <div id="animation-container"></div>
+      </div>
+
+      <div class="binary-to-decimal">
+        <h2>Binary To Decimal</h2>
+
+        <div class="input-container">
+          <label for="binary-input">Enter a decimal number: </label>
+          <input id="binary-input" class="number-input" type="number" value="" name="binary number input" />
+
+          <button id="binary-convert-btn" class="convert-btn">Convert</button>
+        </div>
+
+        <output id="decimal-result" for="binary-input"></output>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
