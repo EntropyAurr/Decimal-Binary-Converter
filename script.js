@@ -37,9 +37,10 @@ const animationData = [
 
 const decimalToBinary = (input) => {
   if (input === 0 || input === 1) {
-    return String(input);
+    return String(input); // base case
   } else {
     return decimalToBinary(Math.floor(input / 2)) + (input % 2);
+    // recursive function, call decimalToBinary function until the input reach 1 or 0
   }
 };
 
@@ -65,7 +66,7 @@ const showAnimation = () => {
   }, 20000);
 };
 
-const checkUserInput = () => {
+const checkDecimalInput = () => {
   const inputInt = parseInt(decimalInput.value);
 
   if (!decimalInput.value || isNaN(inputInt) || inputInt < 0) {
@@ -82,9 +83,45 @@ const checkUserInput = () => {
   decimalInput.value = "";
 };
 
-decimalConvertBtn.addEventListener("click", checkUserInput);
+decimalConvertBtn.addEventListener("click", checkDecimalInput);
 decimalInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    checkUserInput();
+    checkDecimalInput();
+  }
+});
+
+/* ------- Binary to Decimal ------- */
+const binaryToDecimal = (input) => {
+  const stringNumber = String(input);
+  const array = stringNumber.split("");
+  const arrayNumber = array.map(Number);
+  const length = arrayNumber.length;
+
+  let result = 0;
+  let powerIndex = length - 1;
+
+  for (let i = 0; i < length; i++) {
+    result += arrayNumber[i] * 2 ** powerIndex;
+    powerIndex--;
+  }
+
+  decimalResult.textContent = result;
+};
+
+const checkBinaryInput = () => {
+  const stringNumber = String(binaryInput.value);
+
+  if (stringNumber[0] !== "1") {
+    decimalResult.textContent = "Please provide a binary number start with 1";
+  } else {
+    binaryToDecimal(binaryInput.value);
+    binaryInput.value = "";
+  }
+};
+
+binaryConvertBtn.addEventListener("click", checkBinaryInput);
+binaryInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    checkBinaryInput();
   }
 });
