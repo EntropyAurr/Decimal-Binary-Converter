@@ -2,6 +2,10 @@ const decimalInput = document.getElementById("decimal-input");
 const decimalConvertBtn = document.getElementById("decimal-convert-btn");
 const binaryResult = document.getElementById("binary-result");
 
+const binaryInput = document.getElementById("binary-input");
+const binaryConvertBtn = document.getElementById("binary-convert-btn");
+const decimalResult = document.getElementById("decimal-result");
+
 const animationContainer = document.getElementById("animation-container");
 
 const animationData = [

@@ -23,7 +23,7 @@ h1 {
 h2 {
   text-align: center;
   font-family: "Nanum Gothic Coding";
-  color: #0f4c5c;
+  color: #fff;
 }
 .container {
   display: flex;
@@ -39,6 +39,7 @@ h2 {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  background-color: #264653;
 }
 .input-container {
   display: flex;
@@ -77,8 +78,8 @@ output {
   padding: 15px;
   text-align: center;
   font-size: 28px;
-  border: 4px solid rgb(2, 72, 48);
   border-radius: 8px;
+  background-color: #0a9396;
 }
 #animation-container {
   max-width: 500px;
