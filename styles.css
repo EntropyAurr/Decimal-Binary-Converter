@@ -13,8 +13,8 @@ body {
   font-family: "Ubuntu";
 }
 h1 {
-  font-family: "Doppio One";
-  font-size: 40px;
+  font-family: "Shantell Sans";
+  font-size: 45px;
   text-align: center;
   color: #0f4c5c;
   padding: 30px 0;
@@ -22,7 +22,7 @@ h1 {
 }
 h2 {
   text-align: center;
-  font-family: "Nanum Gothic Coding";
+  font-family: "Niramit";
   color: #fff;
 }
 .container {
@@ -64,11 +64,20 @@ button {
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
-  background-image: linear-gradient(175deg, rgba(193, 74, 0, 1) 0%, rgba(198, 169, 0, 1) 100%);
+
   color: #fff;
 }
-button:hover {
+.convert-btn {
+  background-image: linear-gradient(175deg, rgba(193, 74, 0, 1) 0%, rgba(198, 169, 0, 1) 100%);
+}
+.convert-btn:hover {
   background-image: linear-gradient(175deg, rgba(193, 74, 0, 1) 0%, rgba(140, 120, 0, 1) 100%);
+}
+.clear-btn {
+  background-color: #e63946;
+}
+.clear-btn:hover {
+  background-color: #c9184a;
 }
 output {
   margin: 40px auto;
